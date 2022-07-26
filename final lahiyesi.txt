@@ -1,0 +1,24 @@
+e commers sayt olacaq uşaq oyunaçaqları
+
+sebete eleve et sil
+mehsulun üzerine basanda details seifesi
+şekile hover olunanda şekilin böyümesi
+dark light mode
+chat özelliği
+elaqe dinamik olsun 
+minimal olaraq 5 seife
+counter up düğmesi olsun
+başlanğıc seife slider olsun
+partnyorlar bölümü olsun
+sade menu olsun 
+mause event olsun 
+loading effekti
+ana seife
+haqqımızda
+xirmetlerimiz
+mehsullarımız
+elaqe
+maşın zapçastı saytı
+
+
+
