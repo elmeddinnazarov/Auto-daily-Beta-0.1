@@ -19,25 +19,31 @@
                     object-fit: cover;
                     transition: 100ms ease-in-out;
                     opacity:1;
+                    user-select:none;
                 }
             }
         }
 
         #next,
         #middle,
-        #prev {
+        #prev,
+        #play,
+        #pause {
             position: absolute;
             width: 15px;
             height: 15px;
             background: rgb(255, 255, 255);
+            color: white;
             border-radius: 100%;
             top: 90%;
             z-index: 100;
             transform: translate(-50%, -50%);
             transition: 300ms ease-in-out;
+            cursor: pointer;
 
             &:hover {
                 background: rgb(247, 175, 35);
+                color: rgb(247, 175, 35);
             }
 
             &#prev {
@@ -51,6 +57,25 @@
 
             &#next {
                 left: 52%;
+            }
+            &#play,
+            &#pause{
+                font-size: 17px;
+                background: transparent;
+                top: 88%;
+                margin-top: 1px;
+                left: 54%;
+                border-radius: 0;
+                width: 0;
+                height: 0;
+            }
+            &#play{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &#pause{
+                opacity: 1;
+                visibility: visible;
             }
         }
     }

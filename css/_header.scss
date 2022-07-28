@@ -22,15 +22,15 @@
 
 
             //position relativi hara veririem verim headewr bottom e üste qalır z index işemir 
-            .categories {
+            #categories {
                 border-right: 1px solid #39393990;
                 border-left: 1px solid #39393990;
-
-      
+                cursor: pointer;
+                
                 i {
                     color: #F7AF23;
                     font-size: 20px;
-                padding: 30px 0;
+                padding: 30px 20px;
 
                 }
 
@@ -41,65 +41,71 @@
                     font-size: 12px;
                     font-weight: 600;
                     text-transform: uppercase;
-                    padding: 0 15px 0 15px;
+                    padding: 0 15px 0 0px;
                 }
 
-                .cat-menu {
-                    visibility: visible;
-                    opacity: 1;
-                    position: absolute;
-                    z-index: 100 !important;
-                    background-color: #393939;
-                    top: 100%;
-                    // left: -23px; //30 px yazıram yaxınlaşır 25 yazıram uzaqlaşır 27 yazıram daha çox yaxınlaşır
-                    border: 2px solid #F7AF23;
-                    left: 0%;
+            }
+            #cat-menu {
+                visibility: hidden;
+                opacity: 0;
+                height:0px;
+                overflow: hidden;
+                position: absolute;
+                z-index: 100 !important;
+                background-color: #393939;
+                top: 80px;
+                border: 2px solid #F7AF23;
+                left: 0%;
+                transition: 500ms ease-in-out;
 
-                    ul {
-                        .cat-li {
-                            display: flex;
-                            flex-wrap: nowrap;
-                            justify-content: flex-start;
-                            align-items: center;
-                            margin: 0;
-                            padding: 13px 10px;
-                            width: 250px;
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.292);
+                ul {
+                    .cat-li {
+                        cursor: pointer;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 0;
+                        padding: 13px 10px;
+                        width: 270px;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.292);
 
-                            &:hover {
-                                span {
-                                    color: #F7AF23;
-                                }
-                            }
-
-                            img {
-                                width: 13%;
-                                margin: 10px 0 10px 0;
-                            }
-
+                        &:hover {
                             span {
-                                display: block;
-                                color: white;
-                                font-size: 14px;
-                                font-weight: 400;
-                                text-transform: capitalize;
-                                line-height: 21px;
-                                transition: 300ms ease-in-out;
+                                color: #F7AF23;
                             }
+                        }
+
+                        .img-box{
+                            width: 13%;
+                            margin: 5px 10px 0 0;
+
+                        }
+
+                        span {
+                            display: block;
+                            color: white;
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 21px;
+                            transition: 300ms ease-in-out;
                         }
                     }
                 }
 
-
-                .arrow-up {
-                    border-left: 30px solid transparent;
-                    border-right: 30px solid transparent;
-                    border-bottom: 15px solid #393939;
-                    position: absolute;
-                    left: 0px;
-                    top: -15px;
-                }
-
+            }
+            #arrow-up {
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+                border-bottom: 15px solid #393939;
+                position: absolute;
+                left: 0px;
+                top: 100%;
+                z-index: 100;
+                transition: 200ms ease-in-out;
+                opacity: 0;
+                visibility: hidden;
             }
 
             .logo {
@@ -287,6 +293,7 @@
             }
 
             span {
+                cursor: pointer;
                 display: inline-block;
                 background-color: rgba(0, 0, 0, 0.149);
                 color: white;
@@ -295,24 +302,24 @@
                 padding: 5px 10px;
                 margin-right: 20px;
 
-                &:hover {
-                    cursor: pointer;
-
-                    .currency {
-                        opacity: 1;
-                        visibility: visible;
-                    }
+                .activeCurrency{
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    height: 114px !important;
                 }
-
-                .currency {
-                    transition: 300ms ease-in-out;
-                    opacity: 0;
-                    visibility: hidden;
+                #currency {
+                    cursor: pointer;
+                    transition: 500ms ease-in-out;
+                    z-index: 100;
                     position: absolute;
                     top: 100%;
                     background-color: white;
                     padding: 0 10px;
                     right: 20px;
+                    height: 0px;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow: hidden;
 
                     p {
                         margin: 0;
